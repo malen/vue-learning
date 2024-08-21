@@ -21,3 +21,32 @@ vite是新一代前端构建工具，它基于Rollup打包，可以快速启动�
 pnpm create vite
 ```
 
+# vite创建vue3工程目录
+.vscode/
+├── extensions.json # vscode插件配置文件
+
+src/
+├── App.vue # 根组件
+├── main.ts # 入口文件
+├── assets # 静态资源目录
+├── components # 组件目录
+├── vite-env.d.ts # 类型声明文件
+
+vite.config.ts # vite配置文件
+package.json # 项目配置文件
+
+vue文件中有三种标签
+- `<template>`：模板
+- `<script>`：脚本
+- `<style>`：样式
+
+## vue2 选项式：弊端
+Options类型的API，数据，方法，计算属性等，是分散在：data，methods，computed中的，若想新增或者修改一个需求，
+就需要分别修改：data, methods, computed中的代码，不方便维护。
+
+## vue3 组合式：优势
+组合式API，将数据，方法，计算属性等全部集中在一个地方，通过函数调用的方式来实现，可以更方便的管理代码，
+
+# 拉开序幕的setup
+setup函数是Composition API的核心，它可以帮助我们更好地管理组件的状态，它是一个函数，它接收两个参数：props和context。
+组件中所用到的：数据，方法，计算属性，监视等等，都配置在setup中。
