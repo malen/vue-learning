@@ -1,11 +1,8 @@
-<script lang="ts">
+<script lang="ts" setup name="App">
 import Person from "./components/Person.vue"
-export default {
-  name: "App",
-  components: { Person } // 注册组件
-}
 </script>
 
 <template>
+  <h5 id="title">子组件Person如果直接筛选title这个ID，会拿到此标签元素。</h5>
   <Person />
 </template>
