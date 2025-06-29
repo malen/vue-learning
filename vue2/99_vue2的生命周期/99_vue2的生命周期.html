@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue2的生命周期</title>
+  <!--引入Vue-->
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <!--准备好一个容器-->
+  <div id="root">
+    <h2>当前求和为：{{sum}}</h2>
+    <button @click="add">点我sum+1</button>
+  </div>
+
+</body>
+
+<script>
+  Vue.config.productionTip = false // 阻止Vue再启动时生成生产提示。
+  // vue2中生命周期有四个阶段，八个关键钩子
+  // 创建 （创建前，创建完毕）
+  // 挂载 （挂载前，挂载完毕）
+  // 更新 （更新前，更新完毕）
+  // 销毁 （销毁前，销毁完毕）
+
+  const vm = new Vue({
+    el: '#root',
+    data: {
+      sum: 1
+    },
+    methods: {
+      add() {
+        this.sum += 1
+      }
+    },
+    // 创建前的钩子
+    beforeCreate() {
+      console.log('创建前');
+
+    },
+    // 创建完毕的钩子
+    created() {
+      console.log('创建完毕');
+    },
+    // 挂载前
+    beforeMount() {
+      console.log('挂载前');
+    },
+    // 挂载完毕
+    mounted() {
+      console.log('挂载完毕');
+    },
+    // 更新前
+    beforeUpdate() {
+      console.log('更新前');
+    },
+    // 更新完毕
+    updated() {
+      console.log('更新完毕');
+    },
+    // 销毁前
+    beforeDestroy() {
+      console.log('销毁前');
+    },
+    // 销毁完毕
+    destroyed() {
+      console.log('销毁完毕');
+    },
+  })
+</script>
+
+</html>

@@ -17,15 +17,17 @@
 // 1.vue2中，写在data(){}中的变量自动变成响应式的，可以直接在模板中使用。
 // 2.vue3中，写在setup()中的变量需要使用ref()包裹，才能变成响应式的。
 import { reactive } from 'vue'
-// 数据
+// 数据，reactive包裹的对象，渲染后变成Proxy代理的响应式数据
 let car = reactive({ brand: 'BMW', price: 100 })
 
+// reactive可以包裹数组
 let games = reactive([
   { id: 1, name: 'CSGO' },
   { id: 2, name: 'LOL' },
   { id: 3, name: 'DOTA2' }
 ])
 
+// reactive包裹的对象，响应式是深层次的
 let obj = reactive({
   a: { b: { c: 1 } }
 })
@@ -58,5 +60,9 @@ function test() {           // 测试深层次属性
 
 button {
   margin: 0 5px;
+}
+
+li {
+  font-size: 20px;
 }
 </style>

@@ -30,7 +30,7 @@ export default {
   setup() {
     // console.log("@@", this); // setup() 里面的 this 是undifined,vue3中已经弱化this了。
     // 数据 
-    // TODO:注意：此时的name不是响应式的，需要使用 ref() 包裹
+    // TODO:注意：数据原来是写在data中的。此时的name，age，tel不是响应式的，需要使用 ref() 包裹
     let name = "John Doe";
     let age = 30;
     let tel = "123-456-7890";

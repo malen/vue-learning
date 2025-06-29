@@ -1,6 +1,7 @@
 <script lang="ts">
+// 默认暴露（分别暴露，统一暴露都可以）
 export default {
-  name: "App"
+  name: "App" // 组件名
 }
 </script>
 

@@ -10,6 +10,7 @@
 <script lang="ts">
 export default {
   name: "Person",
+  // Vue3 中同样支持vue2的语法
   data() {
     return {
       name: "John Doe",
@@ -25,6 +26,7 @@ export default {
       this.age += 1;
     },
     showTel() {
+      alert(this.tel)
     },
   }
 };

@@ -50,6 +50,10 @@ watch(person, (newVal, oldVal) => {
   console.log("person变化了", newVal, oldVal);
 }, { deep: true })
 
+// watch的第一个参数是：被监视的数据
+// watch的第二个参数是：监视的回调
+// watch的第三个参数是：配置对象（deep，immediate等等。。）
+
 </script>
 <style scoped>
 .Person {

@@ -58,7 +58,7 @@ function changeCar() {
 // TODO: 注意点：
 // 1.若该属性值不是对象类型，需要写成函数式
 // 2.若该属性值依然是对象类型，可直接变，也可写成函数，不过建议写成函数。
-//
+// 结论：监视的钥匙对象里的属性，那么最好写函数式，注意点：若对象监视的是地址值，需要关注对象内部，需要手动开启深度监视。
 // watch(() => person.name, (newVal, oldVal) => {
 //   console.log("person.name变化了", newVal, oldVal);
 // })
