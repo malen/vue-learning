@@ -22,10 +22,10 @@ const router = createRouter({
 
 ## 34.to的两种写法
 1. to的字符串写法
-<rout-link active-class="active" to="/home">主页</router-link>
+<router-link active-class="active" to="/home">主页</router-link>
 
 2. to的对象写法
-<rout-link active-class="active" :to="{path: '/home'}">主页</router-link>
+<router-link active-class="active" :to="{path: '/home'}">主页</router-link>
 
 ## 35.命令路由
 routes = [
@@ -37,4 +37,4 @@ routes = [
 ]
 
 ### 路由跳转
-<rout-link active-class="active" :to="{name: 'zhuye'}">主页</router-link>
+<router-link active-class="active" :to="{name: 'zhuye'}">主页</router-link>

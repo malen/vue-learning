@@ -24,7 +24,7 @@
         id: news.id,
         title: news.title,
         content: news.content
-    }}" {{news.title}} </router-link>
+    }}"> {{news.title}} </router-link>
 
 2. 接收参数
 import {useRoute} from 'vue-router'

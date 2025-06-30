@@ -6,7 +6,7 @@
         <button @click="showNewsDetail(news)">查看新闻</button>
         <router-link :to="{
           name: 'xiangxi', // 这里必须用name， 如果写path会报错，找不到路由
-          params: { // 这里不能传对象和数组
+          query: { // 这里不能传对象和数组
             id: news.id,
             title: news.title,
             content: news.content,
