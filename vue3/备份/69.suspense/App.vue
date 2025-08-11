@@ -1,8 +1,14 @@
 <template>
   <div class="App">
-    <h2>我是App组件{{ x }}</h2>
-    <Child />
-    <hello />
+    <h2>我是App组件</h2>
+    <Suspense>
+      <template #default>
+        <Child />
+      </template>
+      <template #fallback>
+        加载中
+      </template>
+    </Suspense>
   </div>
 </template>
 <script lang="ts" setup>

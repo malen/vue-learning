@@ -1,0 +1,48 @@
+<template>
+  <div class="Father">
+    <h3>父组件（作用域插槽）</h3>
+    <div class="content">
+      <Game>
+        <template v-slot="params">
+          <ul>
+            <li v-for="g in params.games" :key="g.id">{{ g.name }}</li>
+          </ul>
+        </template>
+      </Game>
+      <Game>
+        <template v-slot="params">
+          <ol>
+            <li v-for="g in params.games" :key="g.id">{{ g.name }}</li>
+          </ol>
+        </template>
+      </Game>
+      <Game>
+        <template v-slot="{ games }">
+          <h3 v-for="g in games" :key="g.id">{{ g.name }}</h3>
+        </template>
+      </Game>
+    </div>
+  </div>
+</template>
+<script lang="ts" setup>
+import { reactive, watch, computed, ref } from 'vue'
+import Game from './Game.vue';
+
+</script>
+<style lang="scss" scoped>
+.Father {
+  background-color: rgb(165, 164, 162);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex; // 推荐
+  justify-content: space-evenly;
+}
+
+img,
+video {
+  width: 100%;
+}
+</style>

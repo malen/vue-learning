@@ -14,5 +14,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      '/api/qinghua': {
+        target: 'https://api.uomg.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/qinghua/, '/api/rand.qinghua')
+      }
+    }
   }
 })
