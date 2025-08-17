@@ -1,6 +1,6 @@
 <template>
   <div class="Person">
-    <h3>情况5:监视上述情况1～5的多个数据</h3>
+    <h3>情况5:监视上述情况1～4的多个数据</h3>
     <h2>姓名：{{ person.name }}</h2>
     <h2>年龄：{{ person.age }}</h2>
     <h2>汽车：{{ person.car.c1 }}, {{ person.car.c2 }}</h2>
@@ -53,7 +53,7 @@ function changeCar() {
   person.car = { c1: "雅迪", c2: "爱玛" }
 }
 
-// 监视;情况5:监视上述情况1～5的多个数据
+// 情况5:监视上述情况1～4的多个数据
 //
 watch([() => person.name, () => person.car.c1], (newVal, oldVal) => {
   console.log("person.name或者person.car.c1发生变化", newVal, oldVal);

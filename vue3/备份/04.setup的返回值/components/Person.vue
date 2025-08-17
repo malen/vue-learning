@@ -49,7 +49,7 @@ export default {
     }
     return { name, age, changeName, changeAge, showTel }
 
-    // TODO: setup的返回值可以是一个函数，返回值会作为渲染函数的返回值
+    // TODO: setup的返回值可以是一个渲染函数，返回值会作为渲染函数的返回值
     // return () => "哈哈哈"
   }
 };

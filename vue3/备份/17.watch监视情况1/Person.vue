@@ -26,7 +26,7 @@ let sum = ref(0)
 function changeSum() {
   sum.value += 1
 }
-// 监视;情况1:监视「ref」定义的「基本类型」数据
+// 情况1:监视「ref」定义的「基本类型」数据
 const stopWatch = watch(sum, (newVal, oldVal) => {
   console.log('sum changed', newVal, oldVal)
   if (newVal >= 10) {

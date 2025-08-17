@@ -41,7 +41,7 @@ function changePerson() {
   Object.assign(person, { name: '李四', age: 21 })
 }
 
-// 监视;情况3:监视「reactive」定义的「对象类型」数据，且默认开启深度监视。（隐式开启的深层监听无法关闭）
+// 情况3:监视「reactive」定义的「对象类型」数据，且默认开启深度监视。（隐式开启的深层监听无法关闭）
 //
 // TODO:注意点：
 // 监视的对象地址没变，所以newVal和oldVal是一样的。
